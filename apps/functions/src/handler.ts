@@ -18,8 +18,7 @@ function getStore(): IStore {
 }
 
 function ulidLike() {
-    // Not a real ULID; sufficient for demo v0.1
-    return randomUUID().replace(/-/g, "").slice(0, 26).toUpperCase();
+    return randomUUID();
 }
 
 export const handler: Handler = async (event) => {
@@ -82,3 +81,5 @@ export const handler: Handler = async (event) => {
         return json(500, { ok: false, error: err?.message || String(err) });
     }
 };
+
+
