@@ -1,0 +1,13 @@
+{
+    "name": "web",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "nuxi dev",
+        "build": "nuxi build",
+        "preview": "nuxi preview"
+    },
+    "dependencies": {
+        "nuxt": "^3.12.0"
+    }
+}

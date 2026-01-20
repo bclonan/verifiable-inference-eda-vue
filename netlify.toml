@@ -1,0 +1,12 @@
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm -C apps/web build && pnpm -C apps/functions build"
+  publish = "apps/web/.output/public"
+
+[functions]
+  directory = "apps/functions/dist"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/handler/:splat"
+  status = 200

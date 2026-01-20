@@ -1,0 +1,14 @@
+{
+    "name": "verifiable-inference-eda-vue",
+    "private": true,
+    "workspaces": [
+        "apps/web",
+        "apps/functions"
+    ],
+    "scripts": {
+        "dev": "tsc -w -p tsconfig.json",
+        "netlify:dev": "netlify dev",
+        "build": "pnpm -C apps/web build && pnpm -C apps/functions build",
+        "lint": "echo \"Add lint later\""
+    }
+}

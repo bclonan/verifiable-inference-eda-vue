@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/bradl/OneDrive/Documents/GitHub/verifiable-inference-eda-vue/node_modules/.pnpm/@nuxt+vite-builder@3.20.2_magicast@0.5.1_nuxt@3.20.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@_55ghkk4rxffxfipjpupcoahuey/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
