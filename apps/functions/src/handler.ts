@@ -1,5 +1,5 @@
 import type { Handler } from "@netlify/functions";
-import { json, badRequest } from "./util/http.js";
+import { json, badRequest } from "./http.js";
 import { MemoryStore } from "./stores/memoryStore.js";
 import { UpstashStore } from "./stores/upstashStore.js";
 import type { IStore } from "./stores/store.js";

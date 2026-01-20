@@ -10,5 +10,8 @@
         "netlify:dev": "netlify dev",
         "build": "pnpm -C apps/web build && pnpm -C apps/functions build",
         "lint": "echo \"Add lint later\""
+    },
+    "devDependencies": {
+        "typescript": "^5.5.4"
     }
 }

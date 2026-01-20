@@ -3,10 +3,10 @@
   publish = "apps/web/.output/public"
 
 [functions]
-  directory = "apps/functions/dist"
+  directory = "apps/functions/src"
   node_bundler = "esbuild"
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/handler/:splat"
+  to = "/.netlify/functions/handler"
   status = 200

@@ -50,7 +50,7 @@ export async function buildView(params: {
                 sessionId: params.sessionId,
                 totalEvents: events.length,
                 lastAction: state?.lastAction ?? null,
-                topActions: Object.entries(state?.counts ?? {}).sort((a, b) => b[1] - a[1]).slice(0, 5)
+                topActions: Object.entries((state as any)?.counts ?? {}).sort((a: any, b: any) => b[1] - a[1]).slice(0, 5)
             }
         };
         await params.store.putMaterializedView(viewKey(viewSpec.viewSpecId, params.sessionId), dto);

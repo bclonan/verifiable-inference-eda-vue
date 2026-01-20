@@ -31,4 +31,3 @@ export { setInterval } from '#app/compat/interval';
 export { definePageMeta } from '../../../node_modules/.pnpm/nuxt@3.20.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@5.9.2_uxdppj2vdeplbsdl3xurwlb5da/node_modules/nuxt/dist/pages/runtime/composables';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
 export { apiFetch } from '../utils/api';
-export { useNuxtDevTools } from '../../../node_modules/.pnpm/@nuxt+devtools@3.1.1_vite@7.3.1_jiti@2.6.1_terser@5.46.0_yaml@2.8.2__vue@3.5.27_typescript@5.9.3_/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
