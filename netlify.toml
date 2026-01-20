@@ -7,14 +7,14 @@
   to = "/.netlify/functions/handler"
   status = 200
 
-# IMPORTANT: do NOT rewrite Nuxt assets to index.html
 [[redirects]]
   from = "/_nuxt/*"
   to = "/_nuxt/:splat"
   status = 200
 
-# SPA fallback for everything else
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+

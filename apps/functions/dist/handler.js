@@ -59,7 +59,12 @@ export const handler = async (event) => {
             const out = await buildView({ store, viewSpecId, sessionId, org, domain, receiptSigningSeedHex: seed });
             // For deterministic views, return DTO directly; for inference views, return extra receipt info
             if (out.receiptId)
-                return json(200, { ok: true, view: out.view, receiptId: out.receiptId, receipt: out.receipt });
+                return json(200, {
+                    ok: true,
+                    viewSpecId,
+                    view: out.view,
+                    inference: { used: true, receiptId: out.receiptId, receipt: out.receipt, inferenceUri: out.inferenceUri }
+                });
             return json(200, out.view);
         }
         // GET /verify?receiptId=
