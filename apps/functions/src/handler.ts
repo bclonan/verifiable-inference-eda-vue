@@ -28,7 +28,9 @@ export const handler: Handler = async (event) => {
         const domain = process.env.DOMAIN || "ux";
         const seed = process.env.RECEIPT_SIGNING_SEED_HEX || "00".repeat(32);
 
-        const path = (event.path || "").replace(/^\/\.netlify\/functions\/handler/, "");
+        const path = (event.path || "")
+            .replace(/^\/\.netlify\/functions\/handler/, "")
+            .replace(/^\/api/, "");
         const method = event.httpMethod || "GET";
         const qs = event.queryStringParameters || {};
 

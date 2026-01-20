@@ -2,15 +2,18 @@
   command = "pnpm install --frozen-lockfile && pnpm -C apps/web build && pnpm -C apps/functions build"
   publish = "apps/web/.output/public"
 
-[functions]
-  directory = "apps/functions/src"
-  node_bundler = "esbuild"
-
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/handler"
   status = 200
 
+# IMPORTANT: do NOT rewrite Nuxt assets to index.html
+[[redirects]]
+  from = "/_nuxt/*"
+  to = "/_nuxt/:splat"
+  status = 200
+
+# SPA fallback for everything else
 [[redirects]]
   from = "/*"
   to = "/index.html"
